@@ -1,0 +1,14 @@
+{
+    "printWidth": 140,
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-css-order"],
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "@executivehomes/(.*)$",
+        "^(?!.*(THIRD_PARTY_MODULES|@executivehomes|scss|classnames)).*$",
+        ".*\\.scss$|classnames"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+}
