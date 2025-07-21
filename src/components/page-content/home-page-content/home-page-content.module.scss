@@ -10,28 +10,102 @@
         text-transform: uppercase;
     }
 
-    .ticTacToeBoard {
-        display: grid;
-        grid-template-rows: repeat(3, 100px);
-        grid-template-columns: repeat(3, 100px);
-        gap: 16px;
+    .playerSymbolAndScoreTrackersWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
 
-        margin-top: 32px;
+        margin-top: 16px;
 
-        background-color: black;
+        .playerSymbolTracker {
+            border-radius: 12px;
+            padding: 4px;
 
-        .cell {
+            min-width: 120px;
+
+            text-align: center;
+
+            &.o {
+                --background-color: 0, 0, 255;
+                background-color: rgb(var(--background-color));
+            }
+
+            &.x {
+                --background-color: 255, 0, 0;
+                background-color: rgb(var(--background-color));
+            }
+
+            &.turn {
+                animation: fadingInOut 2s linear infinite;
+            }
+        }
+
+        .scoreTracker {
+            height: fit-content;
+        }
+    }
+
+    .boardWrapper {
+        margin-top: 16px;
+
+        border: 1px solid black;
+        border-radius: 64px;
+
+        padding: 40px;
+        padding-top: 0;
+
+        .winnerText {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 40px;
 
-            cursor: pointer;
-
-            background-color: white;
-
-            font-size: 64px;
-
-            user-select: none;
+            color: red;
+            font-size: 40px;
+            text-transform: uppercase;
         }
+
+        .ticTacToeBoard {
+            display: grid;
+            grid-template-rows: repeat(3, 80px);
+            grid-template-columns: repeat(3, 80px);
+            gap: 16px;
+
+            background-color: black;
+
+            .cell {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+
+                background-color: white;
+
+                font-weight: 700;
+                font-size: 50px;
+
+                user-select: none;
+
+                &.o {
+                    color: blue;
+                }
+
+                &.x {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadingInOut {
+    0%,
+    100% {
+        background-color: rgba(var(--background-color), 0.3);
+    }
+    50% {
+        background-color: rgba(var(--background-color), 0.8);
     }
 }
