@@ -1,0 +1,23 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 32px;
+
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    a {
+        border-radius: 8px;
+
+        background-color: lime;
+        padding: 8px;
+
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}

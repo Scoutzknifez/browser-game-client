@@ -1,0 +1,35 @@
+.root {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 32px;
+
+        border-bottom: 1px solid black;
+
+        padding: 4px;
+
+        h1 {
+            height: fit-content;
+
+            font-weight: 300;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        button {
+            border-radius: 8px;
+
+            background-color: red;
+
+            padding: 8px;
+
+            height: fit-content;
+
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+}

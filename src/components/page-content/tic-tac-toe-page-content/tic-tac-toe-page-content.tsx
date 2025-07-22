@@ -16,7 +16,7 @@ import {
 } from "browser-game-shared";
 import { useEffect, useRef, useState } from "react";
 
-import styles from "./home-page-content.module.scss";
+import styles from "./tic-tac-toe-page-content.module.scss";
 import classNames from "classnames";
 
 type PlayableMove = TicTacToeCellData.X | TicTacToeCellData.O;
